@@ -1,40 +1,45 @@
 """
-Zi-Jun Zhou GR:406.
+Zi-jun Zhou Gr:406
 """
 
 
-class StringFoo:
+class Rectangle:
     """
-    # 1
-    Écrire une classe StringFoo qui contient:
-    un attribut message;
-    une méthode set_string
-    accepte une string en paramètre et la sauvegarde dans l'attribut message.
-    une méthode print_string
-    affiche le contenu de l'attribut message tout en majuscule.
+    #2
+    Écrire une classe Rectangle qui reçoit la largeur ainsi que
+    la longueur comme paramètre dans la méthode __init__.
+    Écrire une méthode calcul_aire qui permet de calculer l’aire du rectangle
+    (elle n’affiche rien à l’écran).
+    Écrire aussi une méthode afficher_infos qui permet
+    d’afficher les caractéristiques du rectangle.
     """
 
-    def __init__(self):
-        self.message = ""
+    def __init__(self, largeur, longueur):
+        self.largeur = largeur
+        self.longeur = longueur
+        self.air = 0
 
-    def set_string(self):
+    def calcul_air(self):
         """
-        accepte une string en paramètre et la sauvegarde dans l'attribut message.
-        :return:
-        """
-        self.message = str(input("Entrer le message:_"))
-        return self.message
+       une méthode calcul_aire qui permet de calculer l’aire du rectangle
+       (elle n’affiche rien à l’écran).
+       :return:
+       """
+        self.air = self.largeur * self.longeur
 
-    def print_string(self):
+    def afficher_infos(self):
         """
-        affiche le contenu de l'attribut message tout en majuscule.
-        :return:
-        """
-        print(f"{self.message.upper()}")
+       aussi une méthode afficher_infos qui permet
+       d’afficher les caractéristiques du rectangle.
+       :return:
+       """
+        print(f"largeur du rectangle:{self.largeur}\n"
+              f"longeur du rectangle:{self.longeur}\n"
+              f"Air du rectangle: {self.air}\n")
 
 
-# cree un instant
-stringfoo_1 = StringFoo()
-# utiliser les methode
-stringfoo_1.set_string()
-stringfoo_1.print_string()
+# cree l'objet
+rectangle_1 = Rectangle(2, 6)
+# utilisation des methodes
+rectangle_1.calcul_air()
+rectangle_1.afficher_infos()
