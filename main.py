@@ -38,8 +38,7 @@ class Rectangle:
               f"Air du rectangle: {self.air}\n")
 
 
-# cree l'objet
 rectangle_1 = Rectangle(2, 6)
-# utilisation des methodes
+
 rectangle_1.calcul_air()
 rectangle_1.afficher_infos()
