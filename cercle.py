@@ -33,9 +33,9 @@ class Cercle:
         self.circonferance = 2 * pi * self.rayon
 
 
-# cree l'objet
+
 cercle = Cercle(55.8)
-# utilisation des methodes
+
 cercle.calcul_circonferance()
 cercle.calcul_aire()
 
